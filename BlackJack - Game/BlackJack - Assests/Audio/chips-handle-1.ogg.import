@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgkpeapvl4nlr"
+path="res://.godot/imported/chips-handle-1.ogg-0b5e7d9d5eb7957a32f318d84c6931b3.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/chips-handle-1.ogg"
+dest_files=["res://.godot/imported/chips-handle-1.ogg-0b5e7d9d5eb7957a32f318d84c6931b3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

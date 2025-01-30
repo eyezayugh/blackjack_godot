@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bihh8cme27rxe"
+path="res://.godot/imported/dice-throw-3.ogg-7b4f3c691f27150305584fa52e414f9d.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/dice-throw-3.ogg"
+dest_files=["res://.godot/imported/dice-throw-3.ogg-7b4f3c691f27150305584fa52e414f9d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

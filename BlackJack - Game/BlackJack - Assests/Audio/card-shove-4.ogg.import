@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxp4dylsxdqla"
+path="res://.godot/imported/card-shove-4.ogg-dd50e441a4001be6181244b127670920.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/card-shove-4.ogg"
+dest_files=["res://.godot/imported/card-shove-4.ogg-dd50e441a4001be6181244b127670920.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

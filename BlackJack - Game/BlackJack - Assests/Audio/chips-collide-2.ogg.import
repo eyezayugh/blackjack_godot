@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rbe0sl8m1u1i"
+path="res://.godot/imported/chips-collide-2.ogg-5e7fb5ef1fe7f62f0e75abd882dd7ecd.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/chips-collide-2.ogg"
+dest_files=["res://.godot/imported/chips-collide-2.ogg-5e7fb5ef1fe7f62f0e75abd882dd7ecd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

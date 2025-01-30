@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqsbomoipo73i"
+path="res://.godot/imported/card-place-2.ogg-e2587bbc9ac43870caffbc63e14e60aa.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/card-place-2.ogg"
+dest_files=["res://.godot/imported/card-place-2.ogg-e2587bbc9ac43870caffbc63e14e60aa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

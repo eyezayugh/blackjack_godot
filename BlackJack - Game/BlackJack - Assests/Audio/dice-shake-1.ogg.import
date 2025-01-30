@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmpj254ty26em"
+path="res://.godot/imported/dice-shake-1.ogg-c2c6b61aed016b39d74f139f689f9a96.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/dice-shake-1.ogg"
+dest_files=["res://.godot/imported/dice-shake-1.ogg-c2c6b61aed016b39d74f139f689f9a96.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

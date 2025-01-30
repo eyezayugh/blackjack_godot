@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1vjftfopj5lq"
+path="res://.godot/imported/chips-stack-5.ogg-b87c9c2b9a65408b97420a5fb05a47be.oggvorbisstr"
+
+[deps]
+
+source_file="res://BlackJack - Assests/Audio/chips-stack-5.ogg"
+dest_files=["res://.godot/imported/chips-stack-5.ogg-b87c9c2b9a65408b97420a5fb05a47be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
