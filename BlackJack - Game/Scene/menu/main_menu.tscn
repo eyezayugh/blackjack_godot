@@ -1,15 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5xky6lv7sm6g"]
+[gd_scene load_steps=14 format=3 uid="uid://bhcj0bch4i7m1"]
 
-[ext_resource type="PackedScene" uid="uid://cqtc66ubmct17" path="res://BlackJack - Assests/Models/chips_fixed/black_white.tscn" id="1_d14wp"]
-[ext_resource type="Script" path="res://scripts/menu/turn_table.gd" id="1_lqwes"]
-[ext_resource type="PackedScene" uid="uid://bajk0rja61q8h" path="res://BlackJack - Assests/Models/chips_fixed/red.tscn" id="2_5xa2b"]
-[ext_resource type="PackedScene" uid="uid://c4ocj6oguwkci" path="res://BlackJack - Assests/Models/chips_fixed/white_blue.tscn" id="3_71ogv"]
-[ext_resource type="PackedScene" uid="uid://cu0v6tvjahx75" path="res://BlackJack - Assests/Models/chips_fixed/blue.tscn" id="4_atuus"]
-[ext_resource type="PackedScene" uid="uid://m3ywrg7v57gt" path="res://BlackJack - Assests/Models/chips_fixed/green.tscn" id="5_tuwg3"]
-[ext_resource type="PackedScene" uid="uid://cuyfnh1c3houe" path="res://Scene/game/objects/card.tscn" id="7_dxnef"]
+[ext_resource type="Script" path="res://scripts/menu/turn_table.gd" id="1_r6bv2"]
+[ext_resource type="PackedScene" path="res://assets/Models/chips_fixed/blue.tscn" id="2_m7e8p"]
+[ext_resource type="PackedScene" path="res://assets/Models/chips_fixed/white_blue.tscn" id="3_58rf6"]
+[ext_resource type="PackedScene" path="res://assets/Models/chips_fixed/red.tscn" id="4_yuksa"]
+[ext_resource type="PackedScene" path="res://assets/Models/chips_fixed/green.tscn" id="5_77u6a"]
+[ext_resource type="PackedScene" path="res://assets/Models/chips_fixed/black_white.tscn" id="6_c0p5w"]
+[ext_resource type="PackedScene" uid="uid://kkrowctmaqv8" path="res://Scene/game/objects/card.tscn" id="7_5ixp4"]
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="7_h6264"]
-[ext_resource type="FontFile" uid="uid://devdd0f5qoav5" path="res://BlackJack - Assests/UI/fonts/kenvector_future2.ttf" id="7_r5sfg"]
-[ext_resource type="FontFile" uid="uid://ftqraqhodivh" path="res://BlackJack - Assests/UI/fonts/kenvector_future_thin2.ttf" id="8_jhgyk"]
+[ext_resource type="FontFile" uid="uid://devdd0f5qoav5" path="res://assets/UI/fonts/kenvector_future2.ttf" id="7_r5sfg"]
+[ext_resource type="FontFile" uid="uid://ftqraqhodivh" path="res://assets/UI/fonts/kenvector_future_thin2.ttf" id="8_jhgyk"]
 
 [sub_resource type="Environment" id="Environment_otwbm"]
 background_mode = 1
@@ -42,49 +42,50 @@ light_energy = 6.0
 spot_range = 7.29742
 
 [node name="chips" type="Node3D" parent="background"]
-transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, -1.45648, 0, -1.1341)
-script = ExtResource("1_lqwes")
+transform = Transform3D(0.875009, 0, -0.484107, 0, 1, 0, 0.484107, 0, 0.875009, -0.905678, 0, -0.246958)
+script = ExtResource("1_r6bv2")
 
-[node name="chip_stack_black" type="Node3D" parent="background/chips"]
-transform = Transform3D(0.791736, -4.89208e-16, -0.610864, 3.48787e-16, 1, -3.48787e-16, 0.610864, 6.30856e-17, 0.791736, -0.117422, 0, 1.65793)
+[node name="chip_blue" parent="background/chips" instance=ExtResource("2_m7e8p")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.918661, 0.464495, -1.09615)
 
-[node name="chip_black_white" parent="background/chips/chip_stack_black" instance=ExtResource("1_d14wp")]
-transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.461459, 0.48266, 0.320983)
+[node name="chip_white_blue" parent="background/chips" instance=ExtResource("3_58rf6")]
+transform = Transform3D(0.982648, 8.1075e-09, 0.185478, 0.185478, -4.29529e-08, -0.982648, 2.13076e-38, 1, -4.37114e-08, -2.14598, 0.606369, -1.28562)
 
-[node name="chip_black_white2" parent="background/chips/chip_stack_black" instance=ExtResource("1_d14wp")]
-transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.527338, 0.679265, 0.320983)
+[node name="chip_red" parent="background/chips" instance=ExtResource("4_yuksa")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.36131, 0.484039, 1.14138)
 
-[node name="chip_black_white3" parent="background/chips/chip_stack_black" instance=ExtResource("1_d14wp")]
-transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.415157, 0.879599, 0.320983)
+[node name="chip_red2" parent="background/chips" instance=ExtResource("4_yuksa")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.675807, 0.484039, 1.14138)
 
-[node name="chip_black_white4" parent="background/chips/chip_stack_black" instance=ExtResource("1_d14wp")]
-transform = Transform3D(0.784647, 2.70986e-08, 0.619943, 0.619943, -3.4298e-08, -0.784647, 1.78928e-15, 1, -4.37114e-08, -1.49283, 1.03205, 0.320983)
+[node name="chip_red3" parent="background/chips" instance=ExtResource("4_yuksa")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.49259, 0.681847, 1.14138)
 
-[node name="chip_stack_red" type="Node3D" parent="background/chips"]
+[node name="chip_red4" parent="background/chips" instance=ExtResource("4_yuksa")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.208053, 0.867339, 1.14138)
 
-[node name="chip_red" parent="background/chips/chip_stack_red" instance=ExtResource("2_5xa2b")]
-transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, -3.08248, 0.457608, -0.649873)
+[node name="chip_green" parent="background/chips" instance=ExtResource("5_77u6a")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.42554, 0.500956, -0.840804)
 
-[node name="chip_red2" parent="background/chips/chip_stack_red" instance=ExtResource("2_5xa2b")]
-transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, -3.21435, 0.648805, -0.595683)
+[node name="chip stack" type="Node3D" parent="background/chips"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.200457, 0, -0.297077)
 
-[node name="chip_red3" parent="background/chips/chip_stack_red" instance=ExtResource("2_5xa2b")]
-transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, -3.08676, 0.84633, -0.477)
+[node name="chip_black_white" parent="background/chips/chip stack" instance=ExtResource("6_c0p5w")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.478998, -2.71415)
 
-[node name="chip_white_blue" parent="background/chips" instance=ExtResource("3_71ogv")]
-transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 1.16329, 0.443538, -1.74907)
+[node name="chip_black_white2" parent="background/chips/chip stack" instance=ExtResource("6_c0p5w")]
+transform = Transform3D(0.846054, -0.533098, 2.33025e-08, -1.5246e-23, -4.37114e-08, -1, 0.533098, 0.846054, -3.69822e-08, 0.0922056, 0.682345, -2.71766)
 
-[node name="chip_blue" parent="background/chips" instance=ExtResource("4_atuus")]
-transform = Transform3D(1, -6.97573e-16, -1.5246e-23, 8.46865e-17, 0.121402, 0.992603, -6.92413e-16, -0.992603, 0.121402, 1.54131, 0.602135, -0.665076)
+[node name="chip_black_white3" parent="background/chips/chip stack" instance=ExtResource("6_c0p5w")]
+transform = Transform3D(0.998047, 0.0624595, -2.73019e-09, -1.5246e-23, -4.37114e-08, -1, -0.0624595, 0.998047, -4.36261e-08, -0.0877843, 0.889243, -2.77444)
 
-[node name="chip_green" parent="background/chips" instance=ExtResource("5_tuwg3")]
-transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.938087, 0.460936, -1.06597)
+[node name="chip_black_white4" parent="background/chips/chip stack" instance=ExtResource("6_c0p5w")]
+transform = Transform3D(0.831035, 0.0520075, -0.553784, -0.552703, -0.0345891, -0.83266, -0.0624595, 0.998048, -4.36261e-08, 1.10889, 0.947208, -2.55191)
 
-[node name="card" parent="background/chips" instance=ExtResource("7_dxnef")]
-transform = Transform3D(0.0923487, -0.000449934, 0.0383604, -0.00204996, 0.0997924, 0.00610555, -0.0383083, -0.00642477, 0.0921477, 0.237671, 0.530135, -3.58465)
+[node name="card" parent="background/chips" instance=ExtResource("7_5ixp4")]
+transform = Transform3D(0.00700412, -0.00807047, 0.999942, -0.00912102, 0.999924, 0.00813424, -0.999933, -0.00917744, 0.00692985, 2.87705, 0.595495, 0.785056)
 
-[node name="card2" parent="background/chips" instance=ExtResource("7_dxnef")]
-transform = Transform3D(-0.0963404, 2.20754e-05, 0.0268054, -0.00246049, 0.0995705, -0.00892516, -0.0266922, -0.00925808, -0.0959261, -1.7072, 0.635136, -3.3742)
+[node name="card2" parent="background/chips" instance=ExtResource("7_5ixp4")]
+transform = Transform3D(0.588273, -0.00121228, 0.80866, -0.00912101, 0.999923, 0.00813422, -0.80861, -0.0121609, 0.588218, 3.35374, 0.639841, -0.440171)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.952948, -0.200657, 0.227215, 0.0135631, 0.777028, 0.62932, -0.30283, -0.596628, 0.743188, -1.626, 3.668, 4.206)

@@ -1,10 +1,10 @@
 extends Node3D
 
-@onready var white_chip = preload("res://BlackJack - Assests/Models/chips_fixed/white_blue.tscn")#1
-@onready var red_chip = preload("res://BlackJack - Assests/Models/chips_fixed/red.tscn") #5
-@onready var green_chip = preload("res://BlackJack - Assests/Models/chips_fixed/green.tscn") #25
-@onready var black_chip = preload("res://BlackJack - Assests/Models/chips_fixed/black_white.tscn") #100
-@onready var blue_chip = preload("res://BlackJack - Assests/Models/chips_fixed/blue.tscn") #500
+@onready var white_chip = preload("res://assets/Models/chips_fixed/blue.tscn")#1
+@onready var red_chip = preload("res://assets/Models/chips_fixed/red.tscn") #5
+@onready var green_chip = preload("res://assets/Models/chips_fixed/green.tscn") #25
+@onready var black_chip = preload("res://assets/Models/chips_fixed/black_white.tscn") #100
+@onready var blue_chip = preload("res://assets/Models/chips_fixed/white_blue.tscn") #500
 
 @onready var chip_models = [
 	white_chip,
