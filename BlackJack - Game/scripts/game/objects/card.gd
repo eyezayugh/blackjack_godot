@@ -10,7 +10,6 @@ var card_textures = [
 @onready var front = $front
 
 func set_card(id):
-	
 	var image = load(card_textures[id]);
 	var material_one = front.mesh.get_material();
 	var new_material = material_one.duplicate();
