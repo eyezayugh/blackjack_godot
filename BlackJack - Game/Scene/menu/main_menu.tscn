@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5xky6lv7sm6g"]
+[gd_scene load_steps=14 format=3 uid="uid://c5xky6lv7sm6g"]
 
 [ext_resource type="PackedScene" uid="uid://cqtc66ubmct17" path="res://BlackJack - Assests/Models/chips_fixed/black_white.tscn" id="1_d14wp"]
 [ext_resource type="Script" path="res://scripts/menu/turn_table.gd" id="1_lqwes"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c4ocj6oguwkci" path="res://BlackJack - Assests/Models/chips_fixed/white_blue.tscn" id="3_71ogv"]
 [ext_resource type="PackedScene" uid="uid://cu0v6tvjahx75" path="res://BlackJack - Assests/Models/chips_fixed/blue.tscn" id="4_atuus"]
 [ext_resource type="PackedScene" uid="uid://m3ywrg7v57gt" path="res://BlackJack - Assests/Models/chips_fixed/green.tscn" id="5_tuwg3"]
+[ext_resource type="PackedScene" uid="uid://cuyfnh1c3houe" path="res://Scene/game/objects/card.tscn" id="7_dxnef"]
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="7_h6264"]
 [ext_resource type="FontFile" uid="uid://devdd0f5qoav5" path="res://BlackJack - Assests/UI/fonts/kenvector_future2.ttf" id="7_r5sfg"]
 [ext_resource type="FontFile" uid="uid://ftqraqhodivh" path="res://BlackJack - Assests/UI/fonts/kenvector_future_thin2.ttf" id="8_jhgyk"]
@@ -17,11 +18,11 @@ ambient_light_color = Color(0.18359, 0.18359, 0.18359, 1)
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3kqt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qt1vh"]
 albedo_color = Color(0.172549, 0.470588, 0.0784314, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1fdar"]
-material = SubResource("StandardMaterial3D_p3kqt")
+material = SubResource("StandardMaterial3D_qt1vh")
 size = Vector3(1000, 1, 1000)
 
 [node name="MainMenu" type="Node3D"]
@@ -79,8 +80,14 @@ transform = Transform3D(1, -6.97573e-16, -1.5246e-23, 8.46865e-17, 0.121402, 0.9
 [node name="chip_green" parent="background/chips" instance=ExtResource("5_tuwg3")]
 transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.938087, 0.460936, -1.06597)
 
+[node name="card" parent="background/chips" instance=ExtResource("7_dxnef")]
+transform = Transform3D(0.0923487, -0.000449934, 0.0383604, -0.00204996, 0.0997924, 0.00610555, -0.0383083, -0.00642477, 0.0921477, 0.237671, 0.530135, -3.58465)
+
+[node name="card2" parent="background/chips" instance=ExtResource("7_dxnef")]
+transform = Transform3D(-0.0963404, 2.20754e-05, 0.0268054, -0.00246049, 0.0995705, -0.00892516, -0.0266922, -0.00925808, -0.0959261, -1.7072, 0.635136, -3.3742)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.952948, -0.200657, 0.227215, 0.0135631, 0.777028, 0.62932, -0.30283, -0.596628, 0.743188, -1.616, 3.998, 3.676)
+transform = Transform3D(0.952948, -0.200657, 0.227215, 0.0135631, 0.777028, 0.62932, -0.30283, -0.596628, 0.743188, -1.626, 3.668, 4.206)
 
 [node name="main_menu_ui" type="Control" parent="Camera3D"]
 layout_mode = 3

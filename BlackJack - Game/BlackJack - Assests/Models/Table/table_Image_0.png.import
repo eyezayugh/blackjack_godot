@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bpy5s84se1lrs"
+path.s3tc="res://.godot/imported/table_Image_0.png-0c83fe8fee2004dcc5bf4528775bd6d9.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d64616291932e41df7f557574403c078"
+}
+
+[deps]
+
+source_file="res://BlackJack - Assests/Models/Table/table_Image_0.png"
+dest_files=["res://.godot/imported/table_Image_0.png-0c83fe8fee2004dcc5bf4528775bd6d9.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

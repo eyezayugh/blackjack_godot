@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://cuyfnh1c3houe"]
+
+[ext_resource type="Script" path="res://scripts/game/card.gd" id="1_al787"]
+[ext_resource type="Texture2D" uid="uid://bftgmsv81ocs6" path="res://BlackJack - Assests/textures/cards/card_clubs_02.png" id="2_08c0c"]
+[ext_resource type="Texture2D" uid="uid://b2ftrbk1xdpp" path="res://BlackJack - Assests/textures/cards/card_back.png" id="3_d1vc8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls08c"]
+albedo_texture = ExtResource("2_08c0c")
+uv1_scale = Vector3(-0.025, 2.08165e-12, -0.026)
+uv1_offset = Vector3(0.5, 2.08165e-12, 0.5)
+uv1_triplanar = true
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="BoxMesh" id="BoxMesh_u3wl5"]
+material = SubResource("StandardMaterial3D_ls08c")
+size = Vector3(25, 1, 35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgi0u"]
+albedo_texture = ExtResource("3_d1vc8")
+uv1_scale = Vector3(0.025, 2.08165e-12, 0.026)
+uv1_offset = Vector3(0.5, 2.08165e-12, 0.5)
+uv1_triplanar = true
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="BoxMesh" id="BoxMesh_cu2g3"]
+material = SubResource("StandardMaterial3D_pgi0u")
+size = Vector3(25, 0.95, 35)
+
+[node name="card" type="Node3D"]
+script = ExtResource("1_al787")
+
+[node name="front" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_u3wl5")
+
+[node name="back" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_cu2g3")

@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://becpiid6dsntd"]
+[gd_scene load_steps=7 format=3 uid="uid://becpiid6dsntd"]
+
+[ext_resource type="PackedScene" uid="uid://3n6c6fnx4nbg" path="res://BlackJack - Assests/Models/table_fixed/table.tscn" id="1_4qrv4"]
+[ext_resource type="PackedScene" uid="uid://cuyfnh1c3houe" path="res://Scene/game/objects/card.tscn" id="2_cumac"]
+[ext_resource type="PackedScene" uid="uid://cofveavykgk53" path="res://Scene/game/objects/chips.tscn" id="3_6ajob"]
+
+[sub_resource type="Environment" id="Environment_m1nbp"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.18359, 0.18359, 0.18359, 1)
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3jr5d"]
+albedo_color = Color(0.172549, 0.470588, 0.0784314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_27uva"]
+material = SubResource("StandardMaterial3D_3jr5d")
+size = Vector3(1000, 1, 1000)
 
 [node name="Game" type="Node3D"]
+
+[node name="stage" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="stage"]
+environment = SubResource("Environment_m1nbp")
+
+[node name="ground" type="MeshInstance3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140284, 0)
+mesh = SubResource("BoxMesh_27uva")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="stage"]
+transform = Transform3D(0.929384, 0.3396, 0.144628, 0.0268598, -0.453007, 0.891103, 0.368136, -0.824292, -0.430139, -5.77182, 94.6645, -23.7329)
+light_energy = 16.0
+spot_range = 77.2045
+spot_angle = 59.3248
+
+[node name="table" parent="stage" instance=ExtResource("1_4qrv4")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.275637, 0.725473, -0.630644, 2.28825e-16, 0.656059, 0.754709, 0.961262, 0.208026, -0.180834, -46.97, 78.08, -15.22)
+
+[node name="card" parent="." instance=ExtResource("2_cumac")]
+transform = Transform3D(0.0647069, 7.96042e-17, 0.292939, 1.04636e-16, 0.3, -1.04636e-16, -0.292939, 1.24742e-16, 0.0647069, -27.7718, 52.3, -14.013)
+
+[node name="card2" parent="." instance=ExtResource("2_cumac")]
+transform = Transform3D(0.0649319, 7.95084e-17, 0.292889, 1.04636e-16, 0.3, -1.04636e-16, -0.292889, 1.24803e-16, 0.0649319, -29.7994, 52.3, -5.52073)
+
+[node name="Chips" parent="." instance=ExtResource("3_6ajob")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.9424, 52.3, 1.44585)

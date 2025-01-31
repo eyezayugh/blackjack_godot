@@ -37,6 +37,8 @@ func _on_settings_back_button_pressed():
 func _on_settings_sound_button_pressed():
 	sound = !sound
 	
+	DataManager.set_sound_setting(sound)
+	
 	if sound:
 		$settings_popup/settings_items/sounnd_settings/settings_sound_button.text = "OFF"
 	else:
