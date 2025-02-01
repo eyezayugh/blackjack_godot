@@ -10,6 +10,6 @@ Experienced this first hand when testing some things, started on Godot version 4
 - To fix it I had to delete the models/texture and re upload them again
 
 All assets were taken from the below links and are CC to creator or free
-[*] Black jack card textures: https://kenney.nl
-[*] Casino/poker chips: https://sketchfab.com
-[*] Casino/poker table: https://sketchfab.com
+- Black jack card textures: https://kenney.nl
+- Casino/poker chips: https://sketchfab.com
+- Casino/poker table: https://sketchfab.com
