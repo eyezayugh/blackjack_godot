@@ -11,7 +11,9 @@ var value = 0
 var ace_value = 0
 var has_ace_value = false
 
-var is_dealer = true
+var dealer_card_shown = false
+
+@export var is_dealer = true
 
 func add_card(id):
 	var new_card = card_scene.instantiate()
@@ -35,6 +37,7 @@ func add_card(id):
 func show_dealer_cards():
 	if is_dealer:
 		$cards.get_child(0).rotation.z = 0
+		dealer_card_shown = true
 
 func calculate_value():
 	var total_value = 0;
