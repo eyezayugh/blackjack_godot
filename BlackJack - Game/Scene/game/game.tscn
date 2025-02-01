@@ -46,3 +46,5 @@ transform = Transform3D(2.92462, 0, -0.66827, 0, 3, 0, 0.66827, 0, 2.92462, -9.6
 
 [node name="Chips" parent="." instance=ExtResource("3_6ajob")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.96816, 3.64087, 24.1556)
+
+[node name="game_objects" type="Node3D" parent="."]

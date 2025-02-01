@@ -1,19 +1,22 @@
 [gd_scene load_steps=8 format=3 uid="uid://kkrowctmaqv8"]
 
 [ext_resource type="Script" path="res://scripts/game/objects/card.gd" id="1_jjxeo"]
-[ext_resource type="Texture2D" uid="uid://dh4v0bflk84iw" path="res://assets/textures/cards/card_hearts_02.png" id="2_7f1s5"]
 [ext_resource type="Texture2D" uid="uid://b2ftrbk1xdpp" path="res://assets/textures/cards/card_back.png" id="3_vdn04"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls08c"]
-albedo_texture = ExtResource("2_7f1s5")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_11fh5"]
+load_path = "res://.godot/imported/card_hearts_A.png-392352c40b0ea67ee19ade2c82662758.etc2.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2mx3"]
+albedo_texture = SubResource("CompressedTexture2D_11fh5")
 uv1_scale = Vector3(0.25, 2.08165e-12, 0.26)
 uv1_offset = Vector3(0.5, 2.08165e-12, 0.5)
 uv1_triplanar = true
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="BoxMesh" id="BoxMesh_u3wl5"]
-material = SubResource("StandardMaterial3D_ls08c")
+[sub_resource type="BoxMesh" id="BoxMesh_ipmat"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_o2mx3")
 size = Vector3(2.5, 0.05, 3.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgi0u"]
@@ -32,9 +35,8 @@ size = Vector3(2.5, 0.03, 3.5)
 script = ExtResource("1_jjxeo")
 
 [node name="front" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
-mesh = SubResource("BoxMesh_u3wl5")
+mesh = SubResource("BoxMesh_ipmat")
 
 [node name="back" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.0147808, 2.08165e-12)
 mesh = SubResource("BoxMesh_cu2g3")
