@@ -115,9 +115,9 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 48.0
-offset_top = -169.0
+offset_top = -140.0
 offset_right = 236.0
-offset_bottom = 169.0
+offset_bottom = 198.0
 grow_vertical = 2
 theme_override_constants/separation = 27
 
@@ -126,13 +126,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("8_jhgyk")
 theme_override_font_sizes/font_size = 33
 text = "New Game"
-alignment = 0
-
-[node name="continue_button" type="Button" parent="Camera3D/main_menu_ui/main_menu_buttons"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("8_jhgyk")
-theme_override_font_sizes/font_size = 33
-text = "Continue"
 alignment = 0
 
 [node name="settings_button" type="Button" parent="Camera3D/main_menu_ui/main_menu_buttons"]
@@ -286,7 +279,6 @@ alignment = 0
 [node name="audio_source" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/new_game_button" to="Camera3D/main_menu_ui" method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/continue_button" to="Camera3D/main_menu_ui" method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/settings_button" to="Camera3D/main_menu_ui" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/about_button" to="Camera3D/main_menu_ui" method="_on_about_button_pressed"]
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/exit_button" to="Camera3D/main_menu_ui" method="_on_exit_button_pressed"]

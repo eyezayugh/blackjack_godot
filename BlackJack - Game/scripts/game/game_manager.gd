@@ -175,7 +175,7 @@ func _on_chip_button_pressed(chip_id):
 	if state == 0:
 		chips.add_chip(chip_id)
 		current_bet = chips.stack_value
-		bet_label.text = "bet : $" + str(current_bet)
+		bet_label.text = "BET : $" + str(current_bet)
 		play_sound(1)
 
 
@@ -190,4 +190,6 @@ func _on_stand_button_pressed():
 
 func _on_new_game_button_pressed():
 	if state == 4:
+		current_bet = 0
+		bet_label.text = "BET : "
 		change_state(0)
