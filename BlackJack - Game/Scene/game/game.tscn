@@ -49,28 +49,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="game_options" type="VBoxContainer" parent="Camera3D/game_ui"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -144.0
-offset_top = -136.0
-offset_right = -25.0
-offset_bottom = -24.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/separation = 20
-
-[node name="hit_button" type="Button" parent="Camera3D/game_ui/game_options"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_hjhi1")
-theme_override_font_sizes/font_size = 33
-text = "hit"
-alignment = 2
-
 [node name="chip_options" type="VBoxContainer" parent="Camera3D/game_ui"]
 layout_mode = 1
 anchors_preset = 2
@@ -175,15 +153,45 @@ theme_override_font_sizes/font_size = 35
 text = "BET : "
 horizontal_alignment = 1
 
-[node name="new_game_button" type="Button" parent="."]
+[node name="game_options" type="VBoxContainer" parent="Camera3D/game_ui"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -136.0
+offset_right = -25.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="hit_button" type="Button" parent="Camera3D/game_ui/game_options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hjhi1")
+theme_override_font_sizes/font_size = 33
+text = "hit"
+alignment = 2
+
+[node name="stand_button" type="Button" parent="Camera3D/game_ui/game_options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hjhi1")
+theme_override_font_sizes/font_size = 33
+text = "stand"
+alignment = 2
+
+[node name="new_game_button" type="Button" parent="Camera3D/game_ui"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.5
+offset_left = -92.5
 offset_top = -23.0
-offset_right = 59.5
+offset_right = 92.5
 offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -203,10 +211,14 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.96816, 3.64087, 24.1556)
 
 [node name="game_objects" type="Node3D" parent="."]
 
-[connection signal="pressed" from="Camera3D/game_ui/game_options/hit_button" to="." method="_on_hit_button_pressed"]
+[node name="audio_source" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/done_button" to="." method="_on_done_button_pressed"]
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/1_chip_button" to="." method="_on_chip_button_pressed" binds= [0]]
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/5-chip_button" to="." method="_on_chip_button_pressed" binds= [1]]
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/25_chip_button" to="." method="_on_chip_button_pressed" binds= [2]]
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/100_chip_button" to="." method="_on_chip_button_pressed" binds= [3]]
 [connection signal="pressed" from="Camera3D/game_ui/chip_options/500_chip_button" to="." method="_on_chip_button_pressed" binds= [4]]
+[connection signal="pressed" from="Camera3D/game_ui/game_options/hit_button" to="." method="_on_hit_button_pressed"]
+[connection signal="pressed" from="Camera3D/game_ui/game_options/stand_button" to="." method="_on_stand_button_pressed"]
+[connection signal="pressed" from="Camera3D/game_ui/new_game_button" to="." method="_on_new_game_button_pressed"]

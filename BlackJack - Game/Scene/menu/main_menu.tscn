@@ -283,6 +283,8 @@ theme_override_font_sizes/font_size = 33
 text = "ENABLE"
 alignment = 0
 
+[node name="audio_source" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/new_game_button" to="Camera3D/main_menu_ui" method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/continue_button" to="Camera3D/main_menu_ui" method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Camera3D/main_menu_ui/main_menu_buttons/settings_button" to="Camera3D/main_menu_ui" method="_on_settings_button_pressed"]

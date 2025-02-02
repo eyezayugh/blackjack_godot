@@ -54,13 +54,23 @@ func calculate_value():
 		if card_value == 0:
 			has_ace_value = true
 		
-	if ace_value && total_value+10 > 21:
+	if ace_value && total_value+11 > 21:
 		has_ace_value = false
 		
 	value = total_value
-	ace_value = total_value + 10
+	ace_value = total_value + 11
 			
 	if !has_ace_value:
 		print(total_value)
 	else:		
-		print(str(total_value) + "/" + str(ace_value + 10))
+		print(str(total_value) + "/" + str(ace_value))
+
+func reset():
+	current_x_offset = 0
+	amount_of_cards = 0
+	value = 0
+	ace_value = 0
+	has_ace_value = false
+	dealer_card_shown = false
+	for card in $cards.get_children():
+		card.queue_free()

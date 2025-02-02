@@ -7,14 +7,14 @@ extends Node3D
 @onready var blue_chip = preload("res://assets/Models/chips_fixed/blue.tscn") #500
 
 @onready var chip_models = [
-	white_chip,red_chip,green_chip,black_chip,blue_chip
+	white_chip, red_chip, green_chip, black_chip, blue_chip
 ]
 
-var values = [1,5,25,100,500]
+var values = [1, 5, 25, 100, 500]
 
 var current_y_offset = 0.1;
 var offset_step = 0.2;
-var stack_value = 0
+var stack_value = 0;
 
 #DEBUG
 func _input(event):
@@ -28,4 +28,8 @@ func add_chip(id):
 	current_y_offset += offset_step
 	add_child(chip)
 
-
+func reset():
+	current_y_offset = 0.1
+	stack_value = 0
+	for chip in get_children():
+		chip.queue_free();
